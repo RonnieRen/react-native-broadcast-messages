@@ -1,0 +1,25 @@
+{
+    "name": "react-native-events",
+    "version": "0.0.1",
+    "description": "simple native module to send a event to native and then native broadcast it to all its subscribers.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "react-native",
+        "events",
+        "listener",
+        "emitter"
+    ],
+    "author": "Ronnie Ren",
+    "license": "MIT",
+    "peerDependencies": {
+        "react-native": "^0.41.2",
+        "react-native-windows": "0.41.0-rc.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ronnieren/react-native-events.git"
+    }
+}
