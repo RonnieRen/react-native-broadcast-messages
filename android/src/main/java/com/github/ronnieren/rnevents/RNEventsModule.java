@@ -8,6 +8,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.WritableMap;
+mport com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 
 public class RNEventsModule extends ReactContextBaseJavaModule {
@@ -26,9 +27,11 @@ public class RNEventsModule extends ReactContextBaseJavaModule {
 
 
     @ReactMethod
-    public void postEvent(String eventName, @Nullable WritableMap params) {
+    public void postEvent(String eventName, @Nullable ReadableMap params) {
+        WritableMap map = Arguments.createMap();
+        map.merge(params);
         this.reactContext
                 .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                .emit(eventName, params);
+                .emit(eventName, map);
     }
 }
