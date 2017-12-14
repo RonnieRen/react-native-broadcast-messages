@@ -1,15 +1,15 @@
 
 import { NativeEventEmitter, NativeModules } from 'react-native';
 
-const { RNEvents } = NativeModules;
-const RNEventsEmitter = new NativeEventEmitter(RNEvents);
+const { RNMessages } = NativeModules;
+const RNMessagesEmitter = new NativeEventEmitter(RNMessages);
 
 const postEvent = function(name, data) {
-    RNEvents.postEvent(name, data);
+    RNMessages.postEvent(name, data);
 }
 
-RNEventsEmitter.postEvent = postEvent;
+RNMessagesEmitter.postEvent = postEvent;
 
-export default RNEventsEmitter;
+export default RNMessagesEmitter;
 
 

@@ -1,13 +1,13 @@
 
-# react-native-events
+# react-native-messages
 
 ## Getting started
 
-`$ npm install react-native-events --save`
+`$ npm install react-native-messages --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-events`
+`$ react-native link react-native-messages`
 
 ### Manual installation
 
@@ -15,39 +15,33 @@
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-events` and add `RNEvents.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNEvents.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
+2. Go to `node_modules` ➜ `react-native-messages` and add `RNMessages.xcodeproj`
+3. In XCode, in the project navigator, select your project. Add `libRNMessages.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
 #### Android
 
 1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.reactlibrary.RNEventsPackage;` to the imports at the top of the file
-  - Add `new RNEventsPackage()` to the list returned by the `getPackages()` method
+  - Add `import com.reactlibrary.RNMessagesPackage;` to the imports at the top of the file
+  - Add `new RNMessagesPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```
-  	include ':react-native-events'
-  	project(':react-native-events').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-events/android')
+  	include ':react-native-messages'
+  	project(':react-native-messages').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-messages/android')
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
-      compile project(':react-native-events')
+      compile project(':react-native-messages')
   	```
 
 #### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
-
-1. In Visual Studio add the `RNEvents.sln` in `node_modules/react-native-events/windows/RNEvents.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Events.RNEvents;` to the usings at the top of the file
-  - Add `new RNEventsPackage()` to the `List<IReactPackage>` returned by the `Packages` method
+    TODO
 
 
 ## Usage
 ```javascript
-import RNEvents from 'react-native-events';
+import RNMessages from 'react-native-messages';
 
-// TODO: What to do with the module?
-RNEvents;
+// post a event to native side
+RNMessages.postEvent
 ```
-  
