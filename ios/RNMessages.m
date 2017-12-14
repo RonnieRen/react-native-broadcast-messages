@@ -15,7 +15,7 @@ RCT_EXPORT_MODULE()
     return @[@"OnMessage"];
 }
 
-RCT_EXPORT_METHOD(postEvent:(NSString*)name data: (id) data) {
+RCT_EXPORT_METHOD(postMessage:(NSString*)name data: (id) data) {
     if(name && [[self supportedEvents] containsObject:name]) {
         [self sendEventWithName: name body: data];
     }

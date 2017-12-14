@@ -42,7 +42,7 @@ public class RNMessagesModule extends ReactContextBaseJavaModule {
 
 
     @ReactMethod
-    public void postEvent(String eventName, @Nullable ReadableMap params) {
+    public void postMessage(String eventName, @Nullable ReadableMap params) {
 
         if(Arrays.asList(supportedEvents()).contains( eventName)) {
             WritableMap map = Arguments.createMap();
