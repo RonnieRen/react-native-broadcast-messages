@@ -1,5 +1,5 @@
 
-package com.github.ronnieren.rnevents;
+package com.github.ronnieren.rnmessages;
 
 import android.support.annotation.Nullable;
 
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 
-public class RNEventsModule extends ReactContextBaseJavaModule {
+public class RNMessagesModule extends ReactContextBaseJavaModule {
 
     private final ReactApplicationContext reactContext;
 
@@ -25,14 +25,14 @@ public class RNEventsModule extends ReactContextBaseJavaModule {
     }
 
 
-    public RNEventsModule(ReactApplicationContext reactContext) {
+    public RNMessagesModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
     }
 
     @Override
     public String getName() {
-        return "RNEvents";
+        return "RNMessages";
     }
 
     static public String[] supportedEvents() {

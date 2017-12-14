@@ -1,7 +1,7 @@
 
-#import "RNEvents.h"
+#import "RNMessages.h"
 
-@implementation RNEvents
+@implementation RNMessages
 
 - (dispatch_queue_t)methodQueue
 {

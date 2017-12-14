@@ -1,5 +1,5 @@
 
-package com.github.ronnieren.rnevents;
+package com.github.ronnieren.rnmessages;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -10,10 +10,10 @@ import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.bridge.JavaScriptModule;
-public class RNEventsPackage implements ReactPackage {
+public class RNMessagesPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      return Arrays.<NativeModule>asList(new RNEventsModule(reactContext));
+      return Arrays.<NativeModule>asList(new RNMessagesModule(reactContext));
     }
 
 //     Deprecated from RN 0.47
