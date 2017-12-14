@@ -12,7 +12,7 @@ RCT_EXPORT_MODULE()
 
 - (NSArray<NSString *> *)supportedEvents
 {
-    return @[@"OnErrorEvent"];
+    return @[@"OnMessage"];
 }
 
 RCT_EXPORT_METHOD(postEvent:(NSString*)name data: (id) data) {
