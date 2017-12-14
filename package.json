@@ -1,5 +1,5 @@
 {
-    "name": "react-native-messages",
+    "name": "react-nativ-broadcast-messages",
     "version": "0.0.1",
     "description": "simple native module to send a event to native and then native broadcast it to all its subscribers.",
     "main": "index.js",
@@ -20,6 +20,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/ronnieren/react-native-messages.git"
+        "url": "https://github.com/ronnieren/react-native-broadcast-messages.git"
     }
 }
