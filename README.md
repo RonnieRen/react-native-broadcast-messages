@@ -43,5 +43,17 @@
 import RNMessages from 'react-native-messages';
 
 // post a event to native side
-RNMessages.postEvent
+RNMessages.postMessage({message: "hello"});
+let data = {
+    greeting: "hello",
+    name: "kitty"
+}
+RNMessages.postMessage({message: data});
+
+// subscribe the message
+RNMessages.addListener((data: any) => {
+    console.log(data);
+});
+
+
 ```
