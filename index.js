@@ -4,12 +4,19 @@ import { NativeEventEmitter, NativeModules } from 'react-native';
 const { RNMessages } = NativeModules;
 const RNMessagesEmitter = new NativeEventEmitter(RNMessages);
 
-const postMessage = function(name, data) {
-    RNMessages.postMessage(name, data);
+const postMessageName = "OnMessage";
+
+const postMessage = function(data) {
+    RNMessages.postMessage(postMessageName, data);
 }
 
-RNMessagesEmitter.postMessage = postMessage;
+const addListener = function(callBack: (data) => void){
+    RNMessagesEmitter.addListener(postMessageName, callBack);
+}
 
-export default RNMessagesEmitter;
+export default {
+    postMessage,
+    addListener
+};
 
 
