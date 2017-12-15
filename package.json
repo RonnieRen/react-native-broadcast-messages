@@ -1,6 +1,6 @@
 {
     "name": "react-nativ-broadcast-messages",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "simple native module to send a event to native and then native broadcast it to all its subscribers.",
     "main": "index.js",
     "scripts": {
@@ -9,6 +9,8 @@
     "keywords": [
         "react-native",
         "events",
+	"messages",
+	"broadcast",
         "listener",
         "emitter"
     ],
